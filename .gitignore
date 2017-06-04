@@ -1,0 +1,17 @@
+#checkpoint
+/snapshots
+
+#log
+train.log
+
+#py
+/__pycache__
+
+#model output
+/output
+
+*.bat
+*.caffemodel
+*.m
+query*
+*.info

@@ -1,0 +1,21 @@
+# net: "/mnt/g/machine_learning/models/vgg/caffe/VGG_ILSVRC_19_layers_train_val.prototxt"
+net: "/home/ubuntu/tensorflow/models/vgg/caffe/VGG_ILSVRC_19_layers_train_val.prototxt"
+# type: "SGD"
+# 70 batches passed to test
+test_iter: 70
+test_interval: 3500
+# lr for fine-tuning should be lower than when starting from scratch
+base_lr: 1e-3
+lr_policy: "step"
+# lr decay factor
+gamma: 0.1
+# lr decays after 7000 steps
+stepsize: 7000
+max_iter: 70000
+momentum: 0.9
+weight_decay: 0.0005
+display: 10
+snapshot: 3500
+# snapshot_prefix: "/mnt/g/machine_learning/models/vgg/caffe/snapshots/vgg"
+snapshot_prefix: "/home/ubuntu/tensorflow/models/vgg/caffe/snapshots/vgg"
+solver_mode: GPU
